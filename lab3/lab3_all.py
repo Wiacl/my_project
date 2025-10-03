@@ -34,3 +34,18 @@ def fibonacci(n):
 
 for num in fibonacci(5):
     print(num)
+    
+    
+from decimal import Decimal, getcontext
+
+getcontext().prec = 10
+
+P = Decimal(input("Начальная сумма вклада: "))
+r = Decimal(input("Процентная ставка годовых: "))
+t = Decimal(input("Срок вклада (в годах): "))
+
+S = P * (1 + r / (12 * 100)) ** (12 * t)
+profit = S - P
+
+print(f"Итоговая сумма: {S:.2f} руб.")
+print(f"Общая прибыль: {profit:.2f} руб.")
