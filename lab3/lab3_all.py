@@ -49,3 +49,14 @@ profit = S - P
 
 print(f"Итоговая сумма: {S:.2f} руб.")
 print(f"Общая прибыль: {profit:.2f} руб.")
+
+
+from fractions import Fraction
+
+f1 = Fraction(3, 4)
+f2 = Fraction(5, 6)
+
+print(f"Сложение: {f1 + f2}")
+print(f"Вычитание: {f1 - f2}")
+print(f"Умножение: {f1 * f2}")
+print(f"Деление: {f1 / f2}")
