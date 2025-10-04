@@ -95,10 +95,10 @@ import math
 # print("Найти сумму нечётных чисел от 1 до N.")
 # z = 0
 # l = []
-# for i in range (1, n+1):
+# for i in range (1, n):
 #     if i%2 == 1:
 #         l.append(i)
-# print(f"Сумма четных чисел от 1 до {n} -", sum(l),"\n")
+# print(f"Сумма нечетных чисел от 1 до {n} -", sum(l),"\n")
 
 "5. Возведение в степень"
 # a = int(input('введите число '))
@@ -185,65 +185,68 @@ import math
 #     print('Не является буковй',"\n")
 
 
-# vowels = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"}
+# vowels = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
 
-# if a.lower in vowels:
+# if a.lower() in vowels:
 #     print('Гласная буква',"\n")
 # else:
 #     print('Согласная буква',"\n")
 
-# if a.islower():
-#     print('Прописная буква',"\n")
+
+# if a.islower()==True:
+#     print('Не прописная',"\n")
+# else:
+#     print("Прописная буква")
 
 "10. Циклы с условием"
 
-# print("Вводить числа, пока не введут 0, и посчитать их сумму.","\n")
+print("Вводить числа, пока не введут 0, и посчитать их сумму.","\n")
 
-# total = 0
-# while True:
-#     num = int(input("Введите число (0 для выхода): "))
-#     if num == 0:
-#         break
-#     total += num
+total = 0
+while True:
+    num = int(input("Введите число (0 для выхода): "))
+    if num == 0:
+        break
+    total += num
 
-# print(f"Сумма введенных чисел: {total}","\n")
+print(f"Сумма введенных чисел: {total}","\n")
 
-# print("Вводить числа, пока не введут отрицательное, и посчитать количество введённых.","\n")
+print("Вводить числа, пока не введут отрицательное, и посчитать количество введённых.","\n")
 
-# count = 0
-# while True:
-#     num = float(input("Введите число: "))
-#     if num < 0:
-#         break
-#     count += 1
+count = 0
+while True:
+    num = float(input("Введите число: "))
+    if num < 0:
+        break
+    count += 1
 
-# print(f"Количество введенных чисел: {count}","\n")
+print(f"Количество введенных чисел: {count}","\n")
 
-# print("Вводить числа, пока не введут чётное, и вывести сумму нечётных.","\n")
+print("Вводить числа, пока не введут чётное, и вывести сумму нечётных.","\n")
 
-# total = 0
-# while True:
-#     num = int(input("Введите число: "))
-#     if num % 2 == 0:
-#         break
-#     total += num
+total = 0
+while True:
+    num = int(input("Введите число: "))
+    if num % 2 == 0:
+        break
+    total += num
 
-# print(f"Сумма нечетных чисел: {total}","\n")
+print(f"Сумма нечетных чисел: {total}","\n")
 
-# print("Вводить числа, пока не введут число больше 100, и вывести среднее арифметическое.","\n")
-# total = 0
-# count = 0
+print("Вводить числа, пока не введут число больше 100, и вывести среднее арифметическое.","\n")
+total = 0
+count = 0
 
-# while True:
-#     num = float(input("Введите число: "))
-#     if num > 100:
-#         break
-#     total += num
-#     count += 1
+while True:
+    num = float(input("Введите число: "))
+    if num > 100:
+        break
+    total += num
+    count += 1
 
-# if count > 0:
-#     average = total / count
-#     print(f"Среднее арифметическое: {average:.2f}","\n")
-# else:
-#     print("Не было введено чисел до 100","\n")
+if count > 0:
+    average = total / count
+    print(f"Среднее арифметическое: {average:.2f}","\n")
+else:
+    print("Не было введено чисел до 100","\n")
 
