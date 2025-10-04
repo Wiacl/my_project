@@ -1,12 +1,15 @@
 squares = [x**2 for x in range(1, 11)]
 print(squares)
+print('='*50)
 
 even_numbers = [x for x in range(1, 20) if x % 2 == 0]
 print(even_numbers)
+print('='*50)
 
 words = ["python", "Java", "c++", "Rust", "go"]
 result = [word.upper() for word in words if len(word) > 3]
 print(result)
+print('='*50)
 
 class Countdown:
     def __init__(self, n):
@@ -24,6 +27,8 @@ class Countdown:
 
 for x in Countdown(5):
     print(x)
+
+print('='*50)
     
 
 def fibonacci(n):
@@ -34,6 +39,8 @@ def fibonacci(n):
 
 for num in fibonacci(5):
     print(num)
+
+print('='*50)
     
     
 from decimal import Decimal, getcontext
@@ -49,6 +56,7 @@ profit = S - P
 
 print(f"Итоговая сумма: {S:.2f} руб.")
 print(f"Общая прибыль: {profit:.2f} руб.")
+print('='*50)
 
 
 from fractions import Fraction
@@ -56,17 +64,21 @@ from fractions import Fraction
 f1 = Fraction(3, 4)
 f2 = Fraction(5, 6)
 
+print('='*50)
 print(f"Сложение: {f1 + f2}")
 print(f"Вычитание: {f1 - f2}")
 print(f"Умножение: {f1 * f2}")
 print(f"Деление: {f1 / f2}")
+print('='*50)
 
 from datetime import datetime
 
 now = datetime.now()
+print('='*50)
 print(f"Текущая дата и время: {now}")
 print(f"Текущая дата: {now.date()}")
 print(f"Текущее время: {now.time()}")
+print('='*50)
 
 from datetime import datetime, date
 
@@ -81,8 +93,10 @@ if next_birthday < today:
 
 days_to_birthday = (next_birthday - today).days
 
+print('='*50)
 print(f"Дней прошло с рождения: {days_passed}")
 print(f"Дней до следующего дня рождения: {days_to_birthday}")
+print('='*50)
 
 from datetime import datetime
 
@@ -94,4 +108,5 @@ def format_date(dt):
     }
     return f"Сегодня {dt.day} {months[dt.month]} {dt.year} года, время: {dt.strftime('%H:%M')}"
 
+print('='*50)
 print(format_date(datetime.now()))
