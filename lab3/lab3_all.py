@@ -1,16 +1,23 @@
+print(f'\nСоздайте список квадратов чисел от 1 до 10 ')
 squares = [x**2 for x in range(1, 11)]
 print(squares)
+
 print('='*50)
 
+print(f"С помощью list comprehension получите список только чётных чисел из диапазона\n")
 even_numbers = [x for x in range(1, 20) if x % 2 == 0]
 print(even_numbers)
 print('='*50)
 
+print(f"Дан список слов: words = 'python', 'Java', 'c++', верхнем регистре и длиннее 3 символов. \n")
+
 words = ["python", "Java", "c++", "Rust", "go"]
 result = [word.upper() for word in words if len(word) > 3]
 print(result)
+
 print('='*50)
 
+print(f"Создайте класс-итератор Countdown , который принимает число п и при итерации возвращает числа от п до 1 .\n")
 class Countdown:
     def __init__(self, n):
         self.n = n
@@ -28,9 +35,10 @@ class Countdown:
 for x in Countdown(5):
     print(x)
 
+
 print('='*50)
     
-
+print(f"Напишите генератор который возвращает первые п чисел Фибоначчи .\n")
 def fibonacci(n):
     a, b = 0, 1
     for _ in range(n):
@@ -42,7 +50,8 @@ for num in fibonacci(5):
 
 print('='*50)
     
-    
+print(f"Напишите программу финансового калькулятора вкладов\n")
+
 from decimal import Decimal, getcontext
 
 getcontext().prec = 10
@@ -56,33 +65,39 @@ profit = S - P
 
 print(f"Итоговая сумма: {S:.2f} руб.")
 print(f"Общая прибыль: {profit:.2f} руб.")
+
 print('='*50)
 
 
 from fractions import Fraction
-
+print(f"Работа с рациональными дробями \n")
 f1 = Fraction(3, 4)
 f2 = Fraction(5, 6)
 
-print('='*50)
+
 print(f"Сложение: {f1 + f2}")
 print(f"Вычитание: {f1 - f2}")
 print(f"Умножение: {f1 * f2}")
 print(f"Деление: {f1 / f2}")
+
 print('='*50)
+
 
 from datetime import datetime
 
+print(f"Работа с датой и временем \n")
 now = datetime.now()
-print('='*50)
 print(f"Текущая дата и время: {now}")
 print(f"Текущая дата: {now.date()}")
 print(f"Текущее время: {now.time()}")
+
 print('='*50)
 
 from datetime import datetime, date
 
-birthday = date(1990, 5, 15)  # замените на свою дату рождения
+print(f"Вычисление дня рождения \n")
+
+birthday = date(2005, 10, 13)  # замените на свою дату рождения
 today = date.today()
 
 days_passed = (today - birthday).days
@@ -93,10 +108,10 @@ if next_birthday < today:
 
 days_to_birthday = (next_birthday - today).days
 
-print('='*50)
+
 print(f"Дней прошло с рождения: {days_passed}")
 print(f"Дней до следующего дня рождения: {days_to_birthday}")
-print('='*50)
+
 
 from datetime import datetime
 
@@ -108,5 +123,5 @@ def format_date(dt):
     }
     return f"Сегодня {dt.day} {months[dt.month]} {dt.year} года, время: {dt.strftime('%H:%M')}"
 
-print('='*50)
+
 print(format_date(datetime.now()))
