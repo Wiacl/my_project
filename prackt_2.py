@@ -76,6 +76,11 @@ def edit_settings(user):
     print(f"Настройки изменены пользователем {user['name']}")
     return "Настройки обновлены"
 
+@require_role(['admin', 'manager'])
+def edit_database(user):
+    print(f"База данных изменена пользователем {user['name']}")
+    return "Операция выполнена успешно"
+
 @require_role(['user', 'admin', 'manager'])
 def view_data(user):
     print(f"Данные просмотрены пользователем {user['name']}")
@@ -86,9 +91,9 @@ print(f"Создание пользователей с разными ролям
 
 # Создание пользователей
 users = [
-    {'name': 'Алексей', 'role': 'admin'},
-    {'name': 'Мария', 'role': 'manager'},
-    {'name': 'Иван', 'role': 'user'},
+    {'name': 'Виталий', 'role': 'admin'},
+    {'name': 'Елена', 'role': 'manager'},
+    {'name': 'Антон', 'role': 'user'},
     {'name': 'Ольга', 'role': 'guest'}
 ]
 
@@ -106,6 +111,15 @@ for user in users:
         print(f"Результат: {result}")
     print("-" * 30)
 
+print(f"Функция edit_database (требует роль 'admin/manager'):\n")
+
+for user in users:
+    print(f"Пользователь: {user['name']}, роль: {user['role']}")
+    result = edit_database(user)
+    if result:
+        print(f"Результат: {result}")
+    print("-" * 30)
+    
 print()
 
 print(f"Функция edit_settings (требует роли 'admin' или 'manager'):\n")
@@ -116,6 +130,7 @@ for user in users:
     if result:
         print(f"Результат: {result}")
     print("-" * 30)
+
 
 print()
 
