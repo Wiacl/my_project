@@ -1,8 +1,8 @@
-print("1. Декоратор логирования: Создать декоратор logger(func)")
-print("=" * 50)
+print(f"1. Декоратор логирования: Создать декоратор logger(func)\n")
+
 
 def logger(func):
-    def wrapper(*args, **kwargs):
+    def wrapper(*args, **kwargs):                   #позиционные, именнованные
         # Перед вызовом функции
         print(f"Вызов функции {func.__name__} с аргументами {args} и {kwargs}")
         
@@ -15,7 +15,6 @@ def logger(func):
     return wrapper
 
 print("Применение декоратора к функциям:")
-print("=" * 50)
 
 @logger
 def add(a, b):
@@ -49,8 +48,9 @@ result4 = greet("Анна")
 print()
 
 print("=" * 50)
-print("2. Декоратор доступа: Создать декоратор require_role(allowed_roles)")
-print("=" * 50)
+
+print(f"2. Декоратор доступа: Создать декоратор require_role(allowed_roles)\n")
+
 
 def require_role(allowed_roles):
     def decorator(func):
@@ -63,8 +63,8 @@ def require_role(allowed_roles):
         return wrapper
     return decorator
 
-print("Пример использования декоратора require_role:")
-print("=" * 50)
+print(f"Пример использования декоратора require_role:\n")
+
 
 @require_role(['admin'])
 def delete_database(user):
@@ -81,8 +81,8 @@ def view_data(user):
     print(f"Данные просмотрены пользователем {user['name']}")
     return "Данные загружены"
 
-print("Создание пользователей с разными ролями:")
-print("=" * 50)
+print(f"Создание пользователей с разными ролями:\n")
+
 
 # Создание пользователей
 users = [
@@ -92,11 +92,13 @@ users = [
     {'name': 'Ольга', 'role': 'guest'}
 ]
 
-print("Тестирование доступа для разных пользователей:")
 print("=" * 50)
+print(f"Тестирование доступа для разных пользователей:\n")
+
 
 # Тестирование функции delete_database для разных пользователей
-print("Функция delete_database (требует роль 'admin'):")
+print(f"Функция delete_database (требует роль 'admin'):\n")
+
 for user in users:
     print(f"Пользователь: {user['name']}, роль: {user['role']}")
     result = delete_database(user)
@@ -106,7 +108,8 @@ for user in users:
 
 print()
 
-print("Функция edit_settings (требует роли 'admin' или 'manager'):")
+print(f"Функция edit_settings (требует роли 'admin' или 'manager'):\n")
+
 for user in users:
     print(f"Пользователь: {user['name']}, роль: {user['role']}")
     result = edit_settings(user)
@@ -116,7 +119,8 @@ for user in users:
 
 print()
 
-print("Функция view_data (требует роли 'user', 'admin' или 'manager'):")
+print(f"Функция view_data (требует роли 'user', 'admin' или 'manager'):\n")
+
 for user in users:
     print(f"Пользователь: {user['name']}, роль: {user['role']}")
     result = view_data(user)
@@ -125,11 +129,12 @@ for user in users:
     print("-" * 30)
 
 print("=" * 50)
-print("Дополнительное тестирование:")
-print("=" * 50)
+
+print(f"Дополнительное тестирование:\n")
+
 
 # Дополнительное тестирование с разными аргументами
-print("Тестирование функций с дополнительными аргументами:")
+print(f"Тестирование функций с дополнительными аргументами:\n")
 
 @require_role(['admin'])
 def create_user(admin_user, username, email):
