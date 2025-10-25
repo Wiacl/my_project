@@ -1,5 +1,5 @@
-print("1. Базовый класс: Создать класс Transport с атрибутами brand, speed, методом move() и __str__")
-print("=" * 50)
+#1. Базовый класс: Создать класс Transport с атрибутами brand, speed, методом move() и __str__
+
 
 class Transport:
     def __init__(self, brand, speed):
@@ -12,8 +12,8 @@ class Transport:
     def __str__(self):
         return f"Transport: {self.brand}, Speed: {self.speed}"
 
-print("2. Наследники: Создать классы Car и Bike")
-print("=" * 50)
+# 2. Наследники: Создать классы Car и Bike"
+
 
 class Car(Transport):
     def __init__(self, brand, speed, seats):
@@ -53,10 +53,10 @@ class Bike(Transport):
     def __str__(self):
         return f"Bike: {self.brand}, Speed: {self.speed}, Type: {self.type}"
 
-print("3. Магические методы: Добавить __len__, __eq__, __add__ в класс Car")
-print("=" * 50)
+# 3. Магические методы: Добавить __len__, __eq__, __add__ в класс Car
 
-print("4. Практика использования: Создание объектов и проверка методов")
+print("4. Практика использования: Создание объектов и проверка методов",'\n')
+
 print("=" * 50)
 
 # 1. Создание объектов
@@ -66,6 +66,7 @@ car2 = Car("Honda", 100, 4)
 bike1 = Bike("Giant", 25, "mountain")
 
 # 2. Вывод объектов (работа __str__)
+
 print("Объекты:")
 print(transport1)
 print(car1)
@@ -74,41 +75,53 @@ print(bike1)
 print()
 
 # 3. Проверка методов move() и honk()
+
 print("Метод move():")
 transport1.move()
 car1.move()
 bike1.move()
 print()
 
-print("Метод honk():")
+print("Метод honk():",'\n')
+
 car1.honk()
+
 print()
 
 # 4. Использование len(car)
-print(f"Количество мест в car1: {len(car1)}")
+
+print(f"Количество мест в car1: {len(car1)}\n")
+
 print()
 
 # 5. Сравнение двух машин
-print(f"car1 == car2 (по скорости): {car1 == car2}")
+
+print(f"car1 == car2 (по скорости): {car1 == car2}\n")
+
 print()
 
 # 6. Сложение скоростей двух машин
-print(f"Сумма скоростей car1 и car2: {car1 + car2}")
+
+print(f"Сумма скоростей car1 и car2: {car1 + car2}\n")
+
 print()
 
 # 7. Сложение машины и велосипеда
-print("Попытка сложить машину и велосипед:")
+
+print("Попытка сложить машину и велосипед:",'\n')
 try:
     result = car1 + bike1
     print(f"Результат: {result}")
 except TypeError as e:
-    print(f"Ошибка: {e}")
-print("Объяснение: Метод __add__ в классе Car проверяет, является ли второй объект экземпляром Car.")
-print("Если нет - возвращает NotImplemented, что вызывает TypeError")
+    print(f"Ошибка: {e}",'\n')
+    
+# print("Объяснение: Метод __add__ в классе Car проверяет, является ли второй объект экземпляром Car.")
+# print("Если нет - возвращает NotImplemented, что вызывает TypeError")
 
-print("=" * 50)
-print("5. Дополнительное задание: Список объектов и вызов метода move()")
-print("=" * 50)
+
+print("5.Список объектов и вызов метода move()\n")
+
+print("=" * 50,'\n')
 
 # Создание списка объектов
 transports = [
@@ -120,7 +133,10 @@ transports = [
 ]
 
 # Вызов метода move() для каждого объекта
-print("Вызов метода move() для всех объектов в списке:")
+
+print("Вызов метода move() для всех объектов в списке:\n")
+
 for transport in transports:
     transport.move()
+    print()
 

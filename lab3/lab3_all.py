@@ -1,10 +1,12 @@
 print(f'\nСоздайте список квадратов чисел от 1 до 10 ')
+
 squares = [x**2 for x in range(1, 11)]
 print(squares)
 
 print('='*50)
 
 print(f"С помощью list comprehension получите список только чётных чисел из диапазона\n")
+
 even_numbers = [x for x in range(1, 20) if x % 2 == 0]
 print(even_numbers)
 print('='*50)
@@ -18,6 +20,7 @@ print(result)
 print('='*50)
 
 print(f"Создайте класс-итератор Countdown , который принимает число п и при итерации возвращает числа от п до 1 .\n")
+
 class Countdown:
     def __init__(self, n):
         self.n = n
@@ -39,6 +42,7 @@ for x in Countdown(5):
 print('='*50)
     
 print(f"Напишите генератор который возвращает первые п чисел Фибоначчи .\n")
+
 def fibonacci(n):
     a, b = 0, 1
     for _ in range(n):
@@ -70,10 +74,11 @@ print('='*50)
 
 
 from fractions import Fraction
+
 print(f"Работа с рациональными дробями \n")
+
 f1 = Fraction(3, 4)
 f2 = Fraction(5, 6)
-
 
 print(f"Сложение: {f1 + f2}")
 print(f"Вычитание: {f1 - f2}")
@@ -82,11 +87,12 @@ print(f"Деление: {f1 / f2}")
 
 print('='*50)
 
-
 from datetime import datetime
 
 print(f"Работа с датой и временем \n")
+
 now = datetime.now()
+
 print(f"Текущая дата и время: {now}")
 print(f"Текущая дата: {now.date()}")
 print(f"Текущее время: {now.time()}")
@@ -97,10 +103,12 @@ from datetime import datetime, date
 
 print(f"Вычисление дня рождения \n")
 
-birthday = date(2005, 10, 13)  # замените на свою дату рождения
+birthday = date(2005, 10, 13) 
+
 today = date.today()
 
 days_passed = (today - birthday).days
+
 next_birthday = date(today.year, birthday.month, birthday.day)
 
 if next_birthday < today:

@@ -65,8 +65,9 @@ def require_role(allowed_roles):
 
 print(f"Пример использования декоратора require_role:\n")
 
-
+ 
 @require_role(['admin'])
+@logger
 def delete_database(user):
     print(f"База данных удалена пользователем {user['name']}")
     return "Операция выполнена успешно"
